@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    background-color: yellow;
+}
+/* Ici c'est le code pour la nav-bar ou la barre de navigation  */
+.overlay{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+header{
+    height: 700px;
+    width: 100%;
+    background-image: url(imges/coqs.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header .entete{
+    display: flex;
+    width: 100%;
+    background-color: green;
+}
+header nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+header nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+header nav ul li{
+    padding: 10px;
+    width: 100px;
+}
+header ul li a{
+    color: black;
+}
+a.btn:hover{
+    background-color: #fff;
+    transition: ease-in;
+}
+/* La partie responsive de la nav bar */
+
+@media screen and (max-width:500px) {
+
+    #icons{
+        display: block;
+    }
+    #icons::before{
+        content: '\2630';
+        font-size: 40px;
+        margin-right: 10px;
+    }
+    nav ul{
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        backdrop-filter: blur(5px);
+        /* background-color: skyblue; */
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
+    nav li{
+        padding: 3px 0;
+    }
+    nav li:hover{
+        /* background-color: rgb(190, 231, 248); */
+        
+        z-index: -1;
+    }
+    .active #icons::before{
+        content: '\2715';
+    }
+    nav.active ul{
+        margin-top: 40px;
+        left: 0;
+    }
+    
+    
+}
+
+/*Styliser la banneire*/
+.hearder-contenaire{
+    padding: 20px;
+    padding-left: 30px;
+    margin-left: 100px;
+    margin-top: 100px;
+    display: block;
+    justify-content: end;
+    /* line-height: 50px; */
+    /* font-weight: 700; */
+    align-items: center;
+    border-left: 5px solid black;
+    border-bottom: 1px solid black;
+    width: 600px;
+    /* height: 500px; */
+    border-radius: 5px 0 5px 0;
+    text-align: start;
+    /* background-color: #fff; */
+    backdrop-filter: blur(2px);
+}
+.buttum{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    gap: 20px;
+    width: 250px;
+    /* margin: auto; */
+    margin-top: 10px;
+}
+a.btn{
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    transition: ease-in-out;
+}
+span{
+    color:rgb(17, 0, 83);
+    font-size: 20px;
+}
